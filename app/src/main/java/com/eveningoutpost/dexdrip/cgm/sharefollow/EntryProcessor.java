@@ -7,6 +7,7 @@ import com.eveningoutpost.dexdrip.UtilityModels.Inevitable;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.UUID;
 
 import static com.eveningoutpost.dexdrip.Models.BgReading.SPECIAL_FOLLOWER_PLACEHOLDER;
 
@@ -53,7 +54,7 @@ public class EntryProcessor {
                             } else {
                                 bg.hide_slope = true;
                             }
-
+                            bg.uuid = UUID.randomUUID().toString();
                             bg.sensor = sensor;
                             bg.sensor_uuid = sensor.uuid;
                             bg.source_info = "Share Follow";

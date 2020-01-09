@@ -8,6 +8,7 @@ import com.eveningoutpost.dexdrip.UtilityModels.Unitized;
 import com.eveningoutpost.dexdrip.cgm.nsfollow.messages.Entry;
 
 import java.util.List;
+import java.util.UUID;
 
 import static com.eveningoutpost.dexdrip.Models.BgReading.SPECIAL_FOLLOWER_PLACEHOLDER;
 
@@ -46,6 +47,7 @@ public class EntryProcessor {
                             bg.filtered_data = entry.filtered;
                             bg.noise = entry.noise + "";
                             // TODO need to handle slope??
+                            bg.uuid = UUID.randomUUID().toString();
                             bg.sensor = sensor;
                             bg.sensor_uuid = sensor.uuid;
                             bg.source_info = "Nightscout Follow";
